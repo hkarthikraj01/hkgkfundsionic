@@ -1,0 +1,7 @@
+{
+  "name": "hkgkfunds",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,112 @@
+<ion-content [fullscreen]="true">
+  <ion-header>
+    <ion-toolbar class="ios hydrated" color="primary">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="home" style="color: black;"></ion-back-button>
+      </ion-buttons>
+      <ion-title class="ios title-ios hydrated" style="color: black;">Edit UserProfile</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-grid class="main-header">
+    <div align="center">
+      <ion-avatar>
+        <img src="../../assets/userpng.png" />
+      </ion-avatar>
+    </div>
+  </ion-grid>
+  <form [formGroup]="updateUser" (ngSubmit)="updateForm()">
+  <ion-row class="ion-padding-horizontal">
+    <ion-col size="6">
+      <ion-item lines="none" class="ion-text-center">
+        <!-- <ion-icon name="water" color="primary"></ion-icon> -->
+        <ion-label>
+          <ion-label position="floating">Balance Amount</ion-label>
+          <ion-input formControlName="userBalanceAmount" placeholder="BalanceAmount" type="number" required></ion-input>
+        </ion-label>
+      </ion-item>
+    </ion-col>
+    <ion-col size="6">
+      <ion-item lines="none" class="ion-text-center">
+        <!-- <ion-icon name="trophy" color="primary"></ion-icon> -->
+        <ion-label>
+          <ion-label position="floating">Auto Number</ion-label>
+          <ion-input formControlName="autoNumber" type="text" placeholder="autoNumber" required></ion-input>
+        </ion-label>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-list lines="full">
+    <ion-item>
+      <ion-label>
+        <ion-label position="floating">Name</ion-label>
+        <ion-input formControlName="userName" type="text" required></ion-input>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input formControlName="userPassword" type="text" required></ion-input>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-label position="floating">Phone</ion-label>
+        <ion-input formControlName="userMobileNumber" type="text" required></ion-input>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-label position="floating">User TotalAmount</ion-label>
+        <ion-input formControlName="userTotalAmount" type="number" required></ion-input>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-label position="floating">User AcceptedAmount</ion-label>
+        <ion-input formControlName="userAcceptedAmount" type="number" required></ion-input>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-label position="floating">User ProfilePicture</ion-label>
+        <ion-input formControlName="userProfilePicture" type="text" required></ion-input>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-label position="floating">User Status</ion-label>
+        <ion-input formControlName="userStatus" type="text" required></ion-input>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-label position="floating">Role</ion-label>
+        <ion-input formControlName="role" type="text" required></ion-input>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-label position="floating">Family Numbers Name</ion-label>
+        <ion-input formControlName="familyNumberNames" type="text" required></ion-input>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-label position="floating">Id Proof</ion-label>
+        <ion-input formControlName="identityProof" type="text" required></ion-input>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-label position="floating">Address</ion-label>
+        <ion-input formControlName="userAddress" type="text" required></ion-input>
+      </ion-label>
+    </ion-item>
+    <br>
+      <ion-col>
+        <ion-button type="submit" color="primary" shape="full" expand="block">Add</ion-button>
+      </ion-col>
+  </ion-list>
+</form>
+</ion-content>

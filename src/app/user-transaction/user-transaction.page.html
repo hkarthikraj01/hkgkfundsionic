@@ -1,0 +1,93 @@
+<ion-content [fullscreen]="true">
+  <ion-toolbar color="primary">
+    <!-- <ion-buttons slot="start">
+     <ion-menu-button *ngIf="!back"></ion-menu-button>
+     <ion-back-button *ngIf="back" defaultHref="/home"></ion-back-button>
+    </ion-buttons> -->
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="home" style="color: black;"></ion-back-button>
+      </ion-buttons>
+      <ion-title style="color: black;"> User Transaction </ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" (click)="ngOnInit()"> <i class="fas fa-sync-alt" style="font-size: large; color: black;"  aria-hidden="true"></i> </ion-button>
+    <ion-button fill="clear" (click)="deleteUser(id)"><i class="fas fa-trash" style="font-size: large; color: black;"></i>  </ion-button>
+     <ion-button fill="clear"  [routerLink]="['/edittransaction',id]"><i class="fas fa-edit" style="font-size: large; color: black;"></i> </ion-button>
+     </ion-buttons>
+  </ion-toolbar>
+  <ion-grid class="main-header">
+    <div align="center">
+      <ion-avatar>
+        <img src="../../assets/userpng.png" />
+      </ion-avatar>
+    </div>
+  </ion-grid>
+  <ion-row class="ion-padding-horizontal">
+    <ion-col size="6">
+      <ion-item lines="none" class="ion-text-center">
+        <ion-icon name="person" color="primary"></ion-icon>
+        <ion-label>
+           {{User.userName}}
+          <p>User Name</p>
+        </ion-label>
+      </ion-item>
+    </ion-col>
+    <ion-col size="6">
+      <ion-item lines="none" class="ion-text-center">
+        <ion-icon name="car" color="primary"></ion-icon>
+        <ion-label>
+          {{User.autoNumber}}
+          <p> Auto Number</p>
+        </ion-label>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <div class="btn-group" style="width: 100%;" role="group" aria-label="Basic example">
+    <button type="button" [ngStyle]="{'background-color': !active? 'yellow' : '#FFFE67', 'color':'black'}" style="width: 50%;" (click)="activecolor()" class="btn btn-secondary">User Details</button>
+    <button type="button" [ngStyle]="{'background-color': !active? 'yellow' : '#FFFE67', 'color':'black'}"  style="width: 50%;" (click)="activecolor()" class="btn btn-secondary">User Transactions</button>
+  </div>  
+  <ion-list lines="full">
+    <ion-item>
+      <ion-label>
+        <ion-text>Transaction Id</ion-text>
+        <p><ion-text color="dark">{{User.transactionId}}</ion-text></p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-text>Place</ion-text>
+        <p><ion-text color="dark">{{User.place}}</ion-text></p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-text>AmountRecived</ion-text>
+        <p><ion-text color="dark">{{User.amountRecived}}</ion-text></p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-text>RecivedBy</ion-text>
+        <p><ion-text color="dark">{{User.recivedBy}}</ion-text></p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-text>Recived Date</ion-text>
+        <p><ion-text color="dark">{{User.recivedDate | date:'shortDate'}}</ion-text></p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-text>GienBy</ion-text>
+        <p><ion-text color="dark">{{User.gienBy}}</ion-text></p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-text>BalanceAmount</ion-text>
+        <p><ion-text color="dark">{{User.userBalanceAmount}}</ion-text></p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

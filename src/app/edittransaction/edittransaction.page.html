@@ -1,0 +1,82 @@
+<ion-content [fullscreen]="true">
+  <ion-header>
+    <ion-toolbar class="ios hydrated" color="primary">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="home" style="color: black;"></ion-back-button>
+      </ion-buttons>
+      <ion-title class="ios title-ios hydrated" style="color: black;">Edit UserTransaction</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-grid class="main-header">
+    <div align="center">
+      <ion-avatar>
+        <img src="../../assets/userpng.png" />
+      </ion-avatar>
+    </div>
+  </ion-grid>
+  <form [formGroup]="updateTransaction" (ngSubmit)="updateTransactionForm()">
+  <ion-row class="ion-padding-horizontal">
+    <ion-col size="6">
+      <ion-item lines="none" class="ion-text-center">
+        <!-- <ion-icon name="water" color="primary"></ion-icon> -->
+        <ion-label>
+          <ion-label position="floating">userName</ion-label>
+          <ion-input formControlName="userName" placeholder="userName" type="text" required></ion-input>
+        </ion-label>
+      </ion-item>
+    </ion-col>
+    <ion-col size="6">
+      <ion-item lines="none" class="ion-text-center">
+        <!-- <ion-icon name="trophy" color="primary"></ion-icon> -->
+        <ion-label>
+          <ion-label position="floating">Auto Number</ion-label>
+          <ion-input formControlName="autoNumber" type="text" placeholder="autoNumber" required></ion-input>
+        </ion-label>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-list lines="full">
+    <ion-item>
+      <ion-label>
+        <ion-label position="floating">Place</ion-label>
+        <ion-input formControlName="place" type="text" required></ion-input>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-label position="floating">Amount Recived</ion-label>
+        <ion-input formControlName="amountRecived" type="number" required></ion-input>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-label position="floating">Recived By</ion-label>
+        <ion-input formControlName="recivedBy" type="text" required></ion-input>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-label position="floating">Recived Date {{date | date:'shortDate'}}</ion-label>
+        <ion-input formControlName="recivedDate" type="date" required></ion-input>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-label position="floating">userBalanceAmount</ion-label>
+        <ion-input formControlName="userBalanceAmount" type="number" required></ion-input>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-label position="floating">gienBy</ion-label>
+        <ion-input formControlName="gienBy" type="text" required></ion-input>
+      </ion-label>
+    </ion-item>
+   
+      <ion-col>
+        <ion-button type="submit" color="primary" shape="full" expand="block">Update</ion-button>
+      </ion-col>
+  </ion-list>
+</form>
+</ion-content>

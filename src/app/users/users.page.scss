@@ -1,0 +1,22 @@
+ion-card{
+    --background : yellow;
+  
+    p{
+     font-weight: 300;
+    }
+    ion-card-subtitle{
+        font-size: large;
+        font-weight: bold;
+        color: black;
+        padding-bottom: 2px;
+    }
+    .date{
+        font-weight: bold;
+        color: black;
+    }
+    .icon{
+        font-size: 25px;
+        color: black;
+        padding-left: 10px;
+    }
+  }

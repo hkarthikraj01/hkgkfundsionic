@@ -1,0 +1,39 @@
+<ion-menu menuId="main-menu" contentId="main">
+  <ion-content>
+   <div class="menu-header-bg"></div>
+   <div class="header-content">
+     <img src="../assets/userpng.png">
+     <ion-lable class="menu-details">
+       <h2>Name<br>
+        <span class="small">1234</span> </h2>
+     </ion-lable>
+   </div>
+   <div class="action-button">
+    <ion-button color="yellow" href="tel:9952608041"><ion-icon name="call-outline"></ion-icon> Call for Help</ion-button>
+  </div>
+    <ion-list class="menu-items"  lines="none">
+      <ion-item [routerLink]="['']">
+        <ion-icon name="home"></ion-icon> Home
+      </ion-item>
+      <ion-item [routerLink]="['/user-profile',id]">
+        <ion-icon name="person-outline"></ion-icon>Profile
+      </ion-item>
+      <ion-item [routerLink]="['/users']">
+        <ion-icon name="person-outline"></ion-icon>View All Users
+      </ion-item>
+      <ion-item [routerLink]="['/adduserprofile']">
+         <ion-icon name="add-circle-outline"></ion-icon> Add User Profile
+      </ion-item>      
+      <ion-item [routerLink]="['/transactions']">
+        <ion-icon name="trail-sign-outline"></ion-icon>View All Transaction
+      </ion-item>
+      <ion-item [routerLink]="['/addtransaction']">
+        <ion-icon name="add-circle-outline"></ion-icon> Add User Transaction
+      </ion-item>
+      <ion-item [routerLink]="['']">
+        <ion-icon name="exit-outline"></ion-icon> Sign Out
+      </ion-item>
+    </ion-list> 
+  </ion-content>
+</ion-menu>
+<ion-router-outlet id="main"></ion-router-outlet>
