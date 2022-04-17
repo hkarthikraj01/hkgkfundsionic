@@ -1,0 +1,20 @@
+<ion-content class="ion-padding"  [fullscreen]="true">
+  <h1 style="margin-top: 100px;">Welcome,</h1>
+  <h3>Sign in to continue!</h3>
+
+  <form [formGroup]="sign" (ngSubmit)="login()">
+    <div class="form-group">
+      <label for="exampleInputEmail1">User Name</label>
+      <input type="email" formControlName="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your user details with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password"formControlName="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+
+    <button type="submit" class="btn btn-success btn-lg btn-block" color="yellow">Submit</button>
+  </form>
+
+  <p class="footer-text">new user <a routerLink="#">Not Allowed</a></p>
+</ion-content>

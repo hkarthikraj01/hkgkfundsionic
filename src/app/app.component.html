@@ -3,10 +3,10 @@
    <div class="menu-header-bg"></div>
    <div class="header-content">
      <img src="../assets/userpng.png">
-     <ion-lable class="menu-details">
-       <h2>Name<br>
-        <span class="small">1234</span> </h2>
-     </ion-lable>
+     <label class="menu-details">
+       <h2>{{userName}}<br>
+        <span class="small">{{autoNumber}}</span> </h2>
+     </label>
    </div>
    <div class="action-button">
     <ion-button color="yellow" href="tel:9952608041"><ion-icon name="call-outline"></ion-icon> Call for Help</ion-button>
@@ -15,7 +15,7 @@
       <ion-item [routerLink]="['']">
         <ion-icon name="home"></ion-icon> Home
       </ion-item>
-      <ion-item [routerLink]="['/user-profile',id]">
+      <ion-item (click)="getUserProfile()">
         <ion-icon name="person-outline"></ion-icon>Profile
       </ion-item>
       <ion-item [routerLink]="['/users']">
@@ -30,7 +30,7 @@
       <ion-item [routerLink]="['/addtransaction']">
         <ion-icon name="add-circle-outline"></ion-icon> Add User Transaction
       </ion-item>
-      <ion-item [routerLink]="['']">
+      <ion-item (click)="signOut()">
         <ion-icon name="exit-outline"></ion-icon> Sign Out
       </ion-item>
     </ion-list> 

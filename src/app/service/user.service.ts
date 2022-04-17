@@ -12,7 +12,7 @@ export class UserService {
         .pipe(map((res:any)=>{
           return res;
         }))
-      }GetSingle
+      }
       getAllUser(){
         return this.Http.get<any>(this.api+'GetAll')
         .pipe(map((res:any)=>{
