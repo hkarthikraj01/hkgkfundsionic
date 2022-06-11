@@ -21,7 +21,7 @@ export class UserService {
         }))
       }
       getSingleUser(id:any){
-        return this.Http.get<any>(this.api+'GetSingle/'+id)
+        return this.Http.get<any>(this.api+'GetSingle?AutoNumber='+id)
         .pipe(map((res:any)=>{
           return res;
         
